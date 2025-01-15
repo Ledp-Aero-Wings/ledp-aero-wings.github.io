@@ -1,0 +1,188 @@
+/* การตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ส่วนหัว */
+header {
+    background: linear-gradient(135deg, #004aad, #0073e6, #00c6ff);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.hero-section h1 {
+    font-size: 42px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+/* ส่วนเนื้อหา */
+main {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    animation: fadeIn 1s ease-in-out;
+    word-wrap: break-word;
+    white-space: normal;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* ส่วนหัวข้อ */
+.about-section h2, .links-section h2 {
+    color: #004aad;
+    font-size: 20px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-bottom: 6px;
+    font-weight: 600;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #004aad;
+    bottom: 5px;
+    left: 28px;
+    border-radius: 2px;
+}
+
+.links-section h2::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #004aad;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* ส่วนประวัติ */
+/* เพิ่มเอฟเฟกต์อนิเมชันไล่สีที่ตัวอักษรใน .about-section p */
+.about-section p {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-weight: 400;
+    background: linear-gradient(135deg, #001A3D, #003F80, #004EAD, #003F80, #001A3D);
+    background-size: 300% 300%; /* ขยายขนาดพื้นหลัง */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientText 120s ease infinite; /* ทำให้แอนิเมชันเคลื่อนไหวตลอด */
+}
+
+/* การตั้งค่าอนิเมชันไล่สี */
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%; /* เริ่มต้นที่ 0% */
+    }
+    50% {
+        background-position: 100% 50%; /* เลื่อนไปที่ 100% */
+    }
+    100% {
+        background-position: 0% 50%; /* กลับไปที่ 0% */
+    }
+}
+
+/* ส่วนลิงก์ */
+.links-section {
+    text-align: center;
+    margin-top: 35px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.links button {
+    display: inline-block;
+    font-size: 13px;
+    color: #004aad;
+    text-decoration: none;
+    background: linear-gradient(135deg, #e6f0ff, #cce4ff);
+    padding: 10px 22px;
+    margin: 8px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    user-select: none;
+    border: none;
+    text-transform: uppercase;
+}
+
+.links button:hover {
+    background: linear-gradient(135deg, #004aad, #0073e6);
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 74, 173, 0.4);
+}
+
+/* ส่วนท้าย */
+footer {
+    text-align: center;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    border-radius: 15px 15px 0 0;
+}
+
+/* แอนิเมชัน */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* การปรับแต่งสำหรับอุปกรณ์มือถือ */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .about-section p {
+        font-size: 15px;
+    }
+
+    .links a {
+        font-size: 16px;
+        padding: 8px 18px;
+    }
+}
