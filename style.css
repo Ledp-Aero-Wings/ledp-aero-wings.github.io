@@ -98,26 +98,12 @@ main {
     line-height: 1.6;
     word-wrap: break-word;
     font-weight: 400;
-    animation: gradientText 120s ease infinite; /* ทำให้แอนิเมชันเคลื่อนไหวตลอด */
     pointer-events: none;
 }
 
 h1, h2, p span {
  pointer-events: auto;
  user-select: text;
-}
-
-/* การตั้งค่าอนิเมชันไล่สี */
-@keyframes gradientText {
-    0% {
-        background-position: 0% 50%; /* เริ่มต้นที่ 0% */
-    }
-    50% {
-        background-position: 100% 50%; /* เลื่อนไปที่ 100% */
-    }
-    100% {
-        background-position: 0% 50%; /* กลับไปที่ 0% */
-    }
 }
 
 /* ส่วนลิงก์ */
@@ -139,7 +125,7 @@ h1, h2, p span {
     margin: 8px;
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.1s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.13s ease-in-out;
     font-weight: 500;
     user-select: none;
     border: none;
@@ -147,9 +133,13 @@ h1, h2, p span {
 }
 
 .links img {
- height: 15px;
- width: 15px;
+ height: 17px;
+ width: 17px;
  margin: 0 10px 0 0;
+}
+
+.links button:active {
+ transform: scale(0.976);
 }
 
 .links button:hover {
