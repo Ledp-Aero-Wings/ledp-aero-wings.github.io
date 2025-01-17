@@ -94,15 +94,10 @@ main {
 .about-section p {
     font-size: 17px;
     margin-bottom: 10px;
-    color: #444;
+    color: #3A71B5;
     line-height: 1.6;
     word-wrap: break-word;
     font-weight: 400;
-    background: linear-gradient(135deg, #001A3D, #003F80, #004EAD, #003F80, #001A3D);
-    background-size: 300% 300%; /* ขยายขนาดพื้นหลัง */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
     animation: gradientText 120s ease infinite; /* ทำให้แอนิเมชันเคลื่อนไหวตลอด */
     pointer-events: none;
 }
