@@ -26,16 +26,19 @@ header {
 .hero-section h1 {
     font-size: 42px;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: bold;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    font-weight: 700;
 }
 
 .hero-section p {
     font-size: 18px;
     margin-top: 12px;
     opacity: 0.9;
+    pointer-events: none;
 }
 
 /* ส่วนเนื้อหา */
@@ -60,6 +63,7 @@ main {
     position: relative;
     padding-bottom: 6px;
     font-weight: 600;
+    pointer-events: none;
 }
 
 .about-section h2::after {
@@ -100,6 +104,12 @@ main {
     -webkit-background-clip: text;
     color: transparent;
     animation: gradientText 120s ease infinite; /* ทำให้แอนิเมชันเคลื่อนไหวตลอด */
+    pointer-events: none;
+}
+
+h1, h2, p span {
+ pointer-events: auto;
+ user-select: text;
 }
 
 /* การตั้งค่าอนิเมชันไล่สี */
@@ -123,7 +133,9 @@ main {
 }
 
 .links button {
-    display: inline-block;
+    display: inline-flex; /* ใช้ Flexbox */
+    align-items: center; /* จัดกึ่งกลางในแนวตั้ง */
+    justify-content: center; /* จัดกึ่งกลางในแนวนอน (ถ้าจำเป็น) */
     font-size: 13px;
     color: #004aad;
     text-decoration: none;
@@ -137,6 +149,12 @@ main {
     user-select: none;
     border: none;
     text-transform: uppercase;
+}
+
+.links img {
+ height: 15px;
+ width: 15px;
+ margin: 0 10px 0 0;
 }
 
 .links button:hover {
@@ -153,6 +171,7 @@ footer {
     color: white;
     font-size: 14px;
     border-radius: 15px 15px 0 0;
+    pointer-events: none;
 }
 
 /* แอนิเมชัน */
