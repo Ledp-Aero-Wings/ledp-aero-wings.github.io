@@ -139,7 +139,7 @@ h1, h2, p span {
 }
 
 .links button:active {
- transform: scale(0.976);
+ transform: scale(0.98);
 }
 
 .links button:hover {
