@@ -114,6 +114,8 @@ h1, h2, p span {
 }
 
 .links button {
+    width: 100%;
+    max-width: 300px;
     display: inline-flex; /* ใช้ Flexbox */
     align-items: center; /* จัดกึ่งกลางในแนวตั้ง */
     justify-content: center; /* จัดกึ่งกลางในแนวนอน (ถ้าจำเป็น) */
@@ -132,7 +134,7 @@ h1, h2, p span {
     text-transform: uppercase;
 }
 
-.links img {
+.links svg {
  height: 17px;
  width: 17px;
  margin: 0 10px 0 0;
@@ -151,12 +153,13 @@ h1, h2, p span {
 /* ส่วนท้าย */
 footer {
     text-align: center;
-    padding: 12px;
+    padding: 10px 12px;
     background-color: #333;
     color: white;
     font-size: 14px;
-    border-radius: 15px 15px 0 0;
+    border-radius: 25px;
     pointer-events: none;
+    margin-bottom: 70px;
 }
 
 /* แอนิเมชัน */
