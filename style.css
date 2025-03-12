@@ -32,6 +32,10 @@
     --neutral-900: #212121;
 }
 
+body {
+ font-family: "Trirong", serif;
+}
+
 /* ปรับแต่ง Header ให้โดดเด่นขึ้น */
 .app-header {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
