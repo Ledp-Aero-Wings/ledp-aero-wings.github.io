@@ -134,17 +134,18 @@ body {
     border-radius: 16px;
     padding: 1rem 1.5rem;
     font-weight: 600;
+    font-size: 0.8em;
     color: var(--primary-500);
     transition: all 0.3s ease;
     box-shadow: 
         0 4px 12px rgba(0, 0, 0, 0.05),
         0 1px 2px rgba(0, 0, 0, 0.02);
-    width: 100%;
-    max-width: 400px; /* กำหนดความกว้างสูงสุดของปุ่ม */
     display: flex;
     align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลางตามแนวตั้ง */
     justify-content: flex-start; /* จัดให้เนื้อหาชิดซ้าย */
     margin: 15px auto; /* จัดปุ่มให้อยู่ตรงกลางและมีระยะห่างด้านบน */
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .app-button:hover {
