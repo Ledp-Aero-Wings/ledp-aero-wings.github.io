@@ -131,7 +131,7 @@ body {
 .app-button {
     background: linear-gradient(145deg, #ffffff, #f8f9ff);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 1rem 1.5rem;
     font-weight: 600;
     font-size: 0.8em;
